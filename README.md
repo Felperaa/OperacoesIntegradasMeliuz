@@ -7,17 +7,16 @@ Esta solução foi desenvolvida para automatizar a análise de testes A/B de cas
 ## Arquitetura da Solução
 A solução utiliza uma abordagem híbrida ideal para integrações com IAs (Cursor, Claude Code, etc.):
 1. **Script Python (`analisador.py`)**: Garante precisão absoluta nos cálculos, tratamento de dados "sujos" (conversão de moedas BR) e padronização dos outputs.
-2. **Prompt de Agente (`instrucoes\\\_agente.md`)**: Contexto em linguagem natural para que qualquer pessoa do time peça à IA para rodar a análise usando o script.
+2. **Prompt de Agente (`instrucoes_agente.md`)**: Contexto em linguagem natural para que qualquer pessoa do time peça à IA para rodar a análise usando o script.
 
 ## Como Rodar
 
 ### Opção 1: Via Linha de Comando (Tradicional)
 Certifique-se de ter o `pandas` instalado (`pip install pandas`). No terminal, rode:
-```bash
 
 python analisador.py dataset\\\_01\\\_parceiroA.csv
 
-
+ou
 
 Opção 2: Via Ferramenta de IA (Cursor / Claude Code / ChatGPT Interpreter)
 
@@ -25,5 +24,5 @@ Basta abrir o chat da ferramenta e digitar:
 
 "Analise os 3 testes A/B que estão nos datasets CSV desta pasta."
 
-A IA usará as diretrizes do arquivo instrucoes\\\_agente.md para rodar o script e devolver a resposta.
+A IA usará as diretrizes do arquivo instrucoes_agente.md para rodar o script e devolver a resposta.
 
